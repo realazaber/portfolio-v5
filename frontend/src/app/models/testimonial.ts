@@ -3,7 +3,6 @@ export interface ITestimonial {
   acf: {
     headline: string;
     description: string;
-    name: string;
     position?: string;
     company: string;
     person: string;

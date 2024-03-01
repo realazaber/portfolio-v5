@@ -1,0 +1,14 @@
+<div class="bg-thir">
+  <eui-section id="testimonial">
+    <eui-container>
+      <h2>Testimonials</h2>
+      <eui-grid [cols]="1" [smCols]="2" [gap]="3">
+        @for (testimonial of testimonials; track testimonial.acf.headline) {
+          <app-testimonial-card
+            [testimonial]="testimonial"
+          ></app-testimonial-card>
+        }
+      </eui-grid>
+    </eui-container>
+  </eui-section>
+</div>
