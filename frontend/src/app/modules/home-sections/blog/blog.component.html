@@ -1,0 +1,28 @@
+<eui-section id="blog">
+  <eui-container>
+    <h2>Blog</h2>
+    <eui-grid [cols]="1" [smCols]="2" [mdCols]="3" [gap]="4">
+      @for (post of posts; track post.title) {
+        <app-blog-card
+          class="mx-auto"
+          [id]="post.id"
+          [title]="post.title"
+          [content]="post.content"
+          [featuredImgAlt]="post.featuredImgAlt"
+          [featuredImgUrl]="post.featuredImgUrl"
+          [category]="post.category"
+          [datePosted]="post.datePosted"
+        ></app-blog-card>
+      }
+    </eui-grid>
+
+    <a
+      href="https://personal-blog-ten-bice.vercel.app/"
+      target="_blank"
+      class="mt-4"
+      ><eui-button bgColor="Primary" size="Large" class="text-white">
+        See more
+      </eui-button></a
+    >
+  </eui-container>
+</eui-section>

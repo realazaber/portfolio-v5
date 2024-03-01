@@ -1,0 +1,25 @@
+<eui-imgcard
+  extUrl="{{ getPostUrl() }}"
+  imgUrl="{{ featuredImgUrl }}"
+  imgAlt="featuredImgAlt"
+>
+  <div class="content bg-slate-50 p-3">
+    <a
+      [href]="getPostUrl()"
+      target="_blank"
+      class="my-3 text-lg font-bold text-primary"
+      >{{ title }}</a
+    >
+    <div class="text-accent" [innerHTML]="content"></div>
+    <div class="flex flex-row justify-between text-accent opacity-95">
+      <span>{{ category }}</span>
+      <span>{{ datePosted }}</span>
+    </div>
+    <a
+      [href]="getPostUrl()"
+      target="_blank"
+      class="font-bold text-primary hover:cursor-pointer"
+      >See more</a
+    >
+  </div>
+</eui-imgcard>
