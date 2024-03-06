@@ -29,12 +29,17 @@
               "src/favicon.ico",
               "src/assets"
             ],
+
             "styles": [
               "src/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": {
+              "discoverRoutes": true,
+              "routesFile": "routes.txt"
+            },
+
             "ssr": {
               "entry": "server.ts"
             }
