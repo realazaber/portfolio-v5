@@ -3,10 +3,136 @@
 @tailwind utilities;
 
 @layer components {
-  body {
-    section {
-      .container {
-        @apply justify-center items-center;
+  * {
+    @apply scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-200 scroll-smooth duration-300 selection:bg-primary selection:text-white;
+
+    body {
+      strong {
+        @apply text-primary;
+      }
+
+      a {
+        @apply hover:cursor-pointer;
+      }
+
+      footer {
+        a {
+          @apply text-white hover:text-primary;
+        }
+      }
+
+      nav {
+        a {
+          @apply text-primary hover:text-blue-800;
+        }
+      }
+
+      button {
+        @apply rounded-md px-4 py-2;
+      }
+
+      .btn-pri {
+        @apply bg-primary text-white;
+      }
+
+      .eui-row {
+        @apply items-center;
+      }
+
+      .other-proj {
+        .eui-col {
+          @apply justify-end;
+        }
+      }
+
+      .eui-imgcard {
+        @apply bg-slate-100 hover:shadow-lg;
+
+        img {
+          @apply max-h-56;
+        }
+
+        div {
+          @apply p-0;
+          .content {
+            @apply p-3;
+          }
+        }
+      }
+
+      .single {
+        h1,
+        h2,
+        h3,
+        b {
+          @apply font-bold text-primary;
+        }
+
+        h1 {
+          @apply text-3xl;
+        }
+
+        h2 {
+          @apply text-2xl;
+        }
+
+        h3 {
+          @apply text-xl;
+        }
+
+        p,
+        span,
+        li,
+        div {
+          @apply text-accent;
+        }
+
+        strong {
+          @apply text-primary;
+        }
+
+        ul {
+          @apply text-primary;
+          b,
+          strong {
+            @apply text-primary;
+          }
+        }
+      }
+
+      .eui-card {
+        @apply bg-white;
+      }
+      section {
+        @apply h-full w-full;
+        .eui-container {
+          h2,
+          h3 {
+            @apply font-bold text-primary;
+          }
+          @apply p-3;
+
+          form {
+            input,
+            textarea {
+              @apply p-3 focus:border-2 focus:border-primary;
+            }
+
+            #contact-submit {
+              button {
+                @apply w-full sm:w-auto;
+              }
+            }
+          }
+
+          h2 {
+            @apply my-2  w-full text-2xl font-bold text-primary;
+          }
+
+          .card {
+            @apply rounded-md shadow-md;
+          }
+        }
       }
     }
   }
