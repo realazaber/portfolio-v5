@@ -1,0 +1,33 @@
+@if (project) {
+  <div
+    class="flex w-full flex-row justify-between border-b-[1px] border-accent border-opacity-25 p-2"
+  >
+    @if (project.id != null) {
+      <a
+        routerLink="/project/{{ project.id }}"
+        class="w-1/2 text-primary sm:w-1/3"
+        >{{ project.acf.title }}</a
+      >
+    }
+    <eui-col
+      [rowStart]="'sm'"
+      class="other-proj w-1/2 justify-end text-right text-accent sm:w-1/3"
+    >
+      @if (project.id != null) {
+        <a routerLink="/project/{{ project.id }}"
+          ><i class="fa-regular fa-file"></i> Case study</a
+        >
+      }
+      @if (project.acf.github != "") {
+        <a href="{{ project.acf.github }}" target="_blank"
+          ><i class="fab fa-github"></i> Code</a
+        >
+      }
+      @if (project.acf.deploy_link != "") {
+        <a href="{{ project.acf.deploy_link }}" target="_blank"
+          ><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a
+        >
+      }
+    </eui-col>
+  </div>
+}
