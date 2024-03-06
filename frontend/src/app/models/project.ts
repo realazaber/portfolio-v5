@@ -1,3 +1,5 @@
+import { ITech } from './tech';
+
 export interface IProject {
   id: number;
   acf: {
@@ -5,18 +7,7 @@ export interface IProject {
     image: string;
     github: string;
     deploy_link: string;
-    tech: {
-      term_id: number;
-      name: string;
-      slug: string;
-      term_group: number;
-      term_taxonomy_id: number;
-      taxonomy: string;
-      description: string;
-      parent: number;
-      count: number;
-      filter: string;
-    }[];
+    tech: ITech[];
     description: string;
     is_main_project: string;
   };
