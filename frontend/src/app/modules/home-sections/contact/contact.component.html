@@ -1,0 +1,58 @@
+<div class="bg-thir" id="contact">
+  <eui-section>
+    <eui-container>
+      <h2>Contact</h2>
+      <eui-col [rowStart]="'sm'" class="rounded-md bg-white p-3">
+        <form
+          action="https://formspree.io/f/xleqnvdy"
+          method="POST"
+          class="w-full text-accent"
+        >
+          <eui-col>
+            <label for="name">Name: </label>
+            <input
+              class="rounded-md border-[1px]"
+              type="text"
+              id="name"
+              required
+            />
+            <label for="email">Email: </label>
+            <input
+              class="rounded-md border-[1px]"
+              type="email"
+              id="email"
+              required
+            />
+
+            <label for="phone"
+              >Phone number:
+              <span class="text-sm opacity-70">optional</span></label
+            >
+            <input class="rounded-md border-[1px]" type="number" id="phone" />
+            <label for="message">Message: </label>
+            <textarea
+              class="rounded-md border-[1px]"
+              type="text"
+              id="message"
+              required
+            ></textarea>
+            <eui-button
+              type="submit"
+              bgColor="Info"
+              size="Medium"
+              id="contact-submit"
+              class="sm:mx-0"
+            >
+              Submit
+            </eui-button>
+          </eui-col>
+        </form>
+        <img
+          src="/assets/me.webp"
+          alt="me"
+          class="w-full object-contain sm:w-2/5"
+        />
+      </eui-col>
+    </eui-container>
+  </eui-section>
+</div>
