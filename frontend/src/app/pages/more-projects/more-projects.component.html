@@ -1,0 +1,42 @@
+<eui-section>
+  <eui-container [dir]="'Col'" class="w-full pt-20">
+    <h2 class="mr-auto">My other projects</h2>
+
+    <form #filterForm="ngForm">
+      <eui-col>
+        <label class="font-bold text-primary" for="category">Tech filter</label>
+        <input
+          type="text"
+          name="filterText"
+          class="rounded-sm border-[1px] border-accent border-opacity-50"
+          (ngModelChange)="filterProjects()"
+          [(ngModel)]="chosenCategory"
+        />
+        <eui-button size="Medium" bgColor="Info" (click)="filterProjects()"
+          >Search</eui-button
+        >
+      </eui-col>
+    </form>
+
+    @if (isLoading == true) {
+      <span class="text-2xl"
+        >Loading <i class="fas fa-circle-notch animate-spin text-primary"></i
+      ></span>
+    } @else {
+      @if (projects.length > 0) {
+        @for (project of projects; track project.id) {
+          <app-other-project
+            class="w-full"
+            [project]="project"
+          ></app-other-project>
+        }
+      } @else {
+        @if (isLoading == false) {
+          <h2 class="text-center">
+            No projects match with {{ chosenCategory }}
+          </h2>
+        }
+      }
+    }
+  </eui-container>
+</eui-section>

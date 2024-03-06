@@ -1,0 +1,12 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3;
+  a {
+    padding: 0px 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

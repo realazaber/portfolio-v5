@@ -1,0 +1,80 @@
+<eui-section id="about">
+  <eui-container>
+    <eui-col class="w-full">
+      <h2>About</h2>
+      <div class="text-accent" [innerHTML]="about"></div>
+      <span class="text-2xl font-bold text-primary">Tech stack</span>
+      <eui-col>
+        <span class="text-xl text-primary">Frontend</span>
+        <eui-grid [cols]="2" [smCols]="3" [mdCols]="4" class="w-fit">
+          <app-tech txtSize="5xl" bgColor="#f04444" name="Angular">
+            <i class="fa-brands fa-angular"></i>
+          </app-tech>
+          <app-tech txtSize="4xl" bgColor="#28d9ff" name="React, Next & Gatsby">
+            <i class="fa-brands fa-react"></i>
+          </app-tech>
+          <app-tech txtSize="4xl" bgColor="#4bb483" name="Vue & Nuxt">
+            <i class="fa-brands fa-vuejs"></i>
+          </app-tech>
+          <app-tech bgColor="#ebebeb" name="Astro">
+            <img
+              src="/assets/astro.webp"
+              class="h-10 w-10 object-contain"
+            /> </app-tech
+        ></eui-grid>
+
+        <span class="text-xl text-primary">Backend</span>
+        <eui-grid [cols]="2" [smCols]="4" [mdCols]="6" class="w-fit">
+          <app-tech
+            txtSize="2xl"
+            bgColor="#512bd5"
+            name=".NET, ASP.NET, Blazor, MAUI"
+            ><b>.NET</b></app-tech
+          >
+          <app-tech
+            txtSize="4xl"
+            bgColor="#f7901d"
+            name="Java, Java Swing, Java FX, JDBC, Hibernate"
+          >
+            <i class="fa-brands fa-java"></i>
+          </app-tech>
+          <app-tech txtSize="5xl" bgColor="#888db8" name="PHP">
+            <i class="fa-brands fa-php"></i>
+          </app-tech>
+          <app-tech txtSize="5xl" bgColor="#f9332c" name="Laravel">
+            <i class="fa-brands fa-laravel"></i>
+          </app-tech>
+          <app-tech txtSize="3xl" bgColor="#377dc8" name="Typescript"
+            ><b>TS</b></app-tech
+          >
+          <app-tech txtSize="3xl" bgColor="#e69211" name="SQL">
+            <i class="fa-solid fa-database"></i> </app-tech
+        ></eui-grid>
+
+        <span class="text-xl text-primary">CMS</span>
+        <eui-grid [cols]="2" [smCols]="3" class="w-fit">
+          <app-tech txtSize="3xl" bgColor="#247196" name="Wordpress">
+            <i class="fa-brands fa-wordpress"></i>
+          </app-tech>
+          <app-tech txtSize="3xl" bgColor="#0097d7" name="Drupal">
+            <i class="fa-brands fa-drupal"></i>
+          </app-tech>
+          <app-tech txtSize="3xl" bgColor="#9ac14f" name="Shopify">
+            <i class="fa-brands fa-shopify"></i> </app-tech
+        ></eui-grid>
+        <span class="text-xl text-primary">Dev Ops</span>
+        <eui-grid [cols]="2" [smCols]="3" class="w-fit">
+          <app-tech txtSize="3xl" bgColor="#cb3833" name="Jenkins">
+            <i class="fab fa-jenkins"></i>
+          </app-tech>
+          <app-tech txtSize="3xl" bgColor="#018de1" name="Docker">
+            <i class="fab fa-docker"></i>
+          </app-tech>
+          <app-tech txtSize="3xl" bgColor="#020202" name="Linux & bash">
+            <i class="fab fa-linux"></i>
+          </app-tech>
+        </eui-grid>
+      </eui-col>
+    </eui-col>
+  </eui-container>
+</eui-section>

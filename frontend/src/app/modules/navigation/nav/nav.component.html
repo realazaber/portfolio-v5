@@ -1,0 +1,78 @@
+<nav class="fixed left-0 right-0 top-1 z-50">
+  <div class="flex flex-row justify-between p-3">
+    <a href="#hero">
+      <app-logo-nav></app-logo-nav>
+    </a>
+    <eui-row
+      class="invisible hidden items-center justify-center gap-x-3 sm:visible sm:flex"
+    >
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#testimonial">Testimonials</a>
+      <a href="https://personal-blog-ten-bice.vercel.app/" target="_blank">
+        Blog
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      </a>
+
+      <a href="#contact">
+        <eui-button bgColor="Primary" size="Medium" class="text-white"
+          >Contact</eui-button
+        ></a
+      >
+    </eui-row>
+
+    <button
+      (click)="toggleMobileMenu()"
+      class="visible flex aspect-square h-14 items-center justify-center rounded-md bg-primary text-3xl font-bold text-white sm:invisible sm:hidden"
+    >
+      <i class="fas fa-hamburger"></i>
+    </button>
+    @if (showMobile) {
+      <div
+        id="mobile-menu"
+        (click)="toggleMobileMenu()"
+        class="visible fixed bottom-0 left-0 right-0 top-0 z-20 flex items-center justify-center bg-white sm:invisible sm:hidden"
+      >
+        <eui-col
+          [ygap]="4"
+          class="z-30 mx-auto my-auto p-3 text-center text-4xl font-bold"
+        >
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#testimonial">Testimonials</a>
+          <a href="https://personal-blog-ten-bice.vercel.app/" target="_blank">
+            Blog
+            <i class="fa-solid fa-arrow-up-right-from-square text-4xl"></i>
+          </a>
+
+          <a href="#contact">
+            <eui-button bgColor="Primary" size="Medium" class="text-white"
+              >Contact</eui-button
+            ></a
+          >
+          <eui-row [xgap]="4" class="mx-auto my-3 text-5xl">
+            <a href="https://github.com/realazaber" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/azaber/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://personal-blog-ten-bice.vercel.app/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-blogger"></i>
+            </a>
+
+            <a href="#contact">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </eui-row>
+        </eui-col>
+      </div>
+    }
+  </div>
+</nav>

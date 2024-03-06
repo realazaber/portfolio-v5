@@ -1,0 +1,28 @@
+@if (experience) {
+  <eui-imgcard
+    [imgAlt]="experience.acf.firm"
+    [imgUrl]="experience.acf.logo"
+    url="/experience/{{ experience.id }}"
+  >
+    <div class="content">
+      <span class="text-primary"
+        >{{ experience.acf.position }} at {{ experience.acf.firm }}
+      </span>
+      <span class="text-primary"
+        >from {{ experience.acf.start_date }} to
+
+        @if (experience.acf.still_working == true) {
+          now
+        } @else {
+          {{ experience.acf.end_date }}
+        }
+      </span>
+      <p class="text-accent">{{ experience.acf.description }}</p>
+      <a
+        class="font-semibold text-primary"
+        routerLink="/experience/{{ experience.id }}"
+        >See more</a
+      >
+    </div>
+  </eui-imgcard>
+}

@@ -1,0 +1,36 @@
+@if (project) {
+  <eui-imgcard
+    imgUrl="{{ project.acf.image }}"
+    imgAlt="{{ project.acf.title }}"
+    url="/project/{{ project.id }}"
+  >
+    <div class="content">
+      <eui-row>
+        <h3 class="text-base font-bold text-primary">
+          {{ project.acf.title }}
+        </h3>
+
+        <eui-col
+          [rowStart]="'sm'"
+          [xgap]="0"
+          class="w-2/5 text-blue-600 opacity-85"
+        >
+          <a href="{{ project.acf.deploy_link }}" target="_blank" class="mr-1"
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a
+          >
+          @if (project.id != null) {
+            <a routerLink="/project/{{ project.id }}"
+              ><i class="fa-regular fa-file"></i> Case study</a
+            >
+          }
+        </eui-col>
+      </eui-row>
+
+      <div class="flex flex-row flex-wrap gap-x-2 text-slate-400">
+        <div *ngFor="let tech of project?.acf?.tech">
+          <span>{{ tech.name }} / </span>
+        </div>
+      </div>
+    </div>
+  </eui-imgcard>
+}

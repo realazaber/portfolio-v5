@@ -1,0 +1,9 @@
+<div class="flex w-20 flex-col">
+  <div
+    [ngClass]="getClasses()"
+    class="flex aspect-square h-20 w-20 items-center justify-center rounded-md p-1 text-center text-white"
+  >
+    <ng-content></ng-content>
+  </div>
+  <span class="w-20 text-center text-accent">{{ name }}</span>
+</div>

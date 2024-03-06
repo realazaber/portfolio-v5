@@ -1,0 +1,26 @@
+<div class="h-20 sm:h-0 sm:min-h-[84px]"></div>
+@if (experience) {
+  <eui-section>
+    <img
+      src="{{ experience.acf.logo }}"
+      alt="{{ experience.acf.firm }}"
+      class="w-full object-contain"
+    />
+    <eui-container>
+      <eui-col>
+        <eui-row>
+          <h1 class="text-2xl font-bold text-primary">
+            {{ experience.acf.firm }}
+          </h1>
+          <span class="text-blue-400"
+            >Started on {{ experience.acf.start_date }}
+            @if (experience.acf.still_working == false) {
+              ended at {{ experience.acf.end_date }}
+            }
+          </span></eui-row
+        >
+        <p class="innerhtml" [innerHTML]="experience.acf.description"></p>
+      </eui-col>
+    </eui-container>
+  </eui-section>
+}
