@@ -1,0 +1,25 @@
+<div class="bg-thir" id="experience">
+  <eui-section>
+    <eui-container>
+      <h2>Experience</h2>
+      <div class="my-3 w-full text-accent" [innerHTML]="experience"></div>
+      <eui-col>
+        @for (experience of experiences; track experience.count) {
+          @if (experience.count) {
+            @if (experience.count % 2 === 0) {
+              <app-experience-card
+                class="sm:ml-auto sm:w-4/5"
+                [experience]="experience"
+              ></app-experience-card>
+            } @else {
+              <app-experience-card
+                class="sm:mr-auto sm:w-4/5"
+                [experience]="experience"
+              ></app-experience-card>
+            }
+          }
+        }
+      </eui-col>
+    </eui-container>
+  </eui-section>
+</div>
