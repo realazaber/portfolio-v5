@@ -4,7 +4,7 @@
 
 @layer components {
   * {
-    @apply scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-200 scroll-smooth duration-300 selection:bg-primary selection:text-white;
+    @apply scroll-smooth duration-300 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-primary selection:bg-primary selection:text-white;
 
     body {
       strong {
@@ -85,6 +85,14 @@
         li,
         div {
           @apply text-accent;
+        }
+
+        li {
+          @apply my-2;
+        }
+
+        li::before {
+          @apply my-auto mr-2 aspect-square min-w-[8px] rounded-full  text-sm text-primary content-["👉"];
         }
 
         strong {

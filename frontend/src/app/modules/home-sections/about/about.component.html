@@ -6,7 +6,7 @@
       <span class="text-2xl font-bold text-primary">Tech stack</span>
       <eui-col>
         <span class="text-xl text-primary">Frontend</span>
-        <eui-grid [cols]="2" [smCols]="3" [mdCols]="4" class="w-fit">
+        <eui-grid [cols]="3" [smCols]="3" [mdCols]="4" class="w-fit">
           <app-tech txtSize="5xl" bgColor="#f04444" name="Angular">
             <i class="fa-brands fa-angular"></i>
           </app-tech>
@@ -24,7 +24,7 @@
         ></eui-grid>
 
         <span class="text-xl text-primary">Backend</span>
-        <eui-grid [cols]="2" [smCols]="4" [mdCols]="6" class="w-fit">
+        <eui-grid [cols]="3" [smCols]="4" [mdCols]="6" class="w-fit">
           <app-tech
             txtSize="2xl"
             bgColor="#512bd5"
@@ -52,7 +52,7 @@
         ></eui-grid>
 
         <span class="text-xl text-primary">CMS</span>
-        <eui-grid [cols]="2" [smCols]="3" class="w-fit">
+        <eui-grid [cols]="3" [smCols]="3" class="w-fit">
           <app-tech txtSize="3xl" bgColor="#247196" name="Wordpress">
             <i class="fa-brands fa-wordpress"></i>
           </app-tech>
@@ -63,7 +63,7 @@
             <i class="fa-brands fa-shopify"></i> </app-tech
         ></eui-grid>
         <span class="text-xl text-primary">Dev Ops</span>
-        <eui-grid [cols]="2" [smCols]="3" class="w-fit">
+        <eui-grid [cols]="3" [smCols]="3" class="w-fit">
           <app-tech txtSize="3xl" bgColor="#cb3833" name="Jenkins">
             <i class="fab fa-jenkins"></i>
           </app-tech>
@@ -72,6 +72,16 @@
           </app-tech>
           <app-tech txtSize="3xl" bgColor="#020202" name="Linux & bash">
             <i class="fab fa-linux"></i>
+          </app-tech>
+        </eui-grid>
+
+        <span class="text-xl text-primary">Cloud</span>
+        <eui-grid [cols]="2" [smCols]="3" class="w-fit">
+          <app-tech txtSize="4xl" bgColor="#ff9a02" name="AWS">
+            <i class="fab fa-aws"></i>
+          </app-tech>
+          <app-tech txtSize="3xl" bgColor="#1d3050" name="Self Hosted">
+            <i class="fas fa-server"></i>
           </app-tech>
         </eui-grid>
       </eui-col>

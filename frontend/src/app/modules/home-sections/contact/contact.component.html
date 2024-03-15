@@ -1,30 +1,39 @@
-<div class="bg-thir" id="contact">
+<div id="contact">
   <eui-section>
+    <hr class="mx-auto my-5 w-4/5" />
     <eui-container>
-      <h2>Contact</h2>
-      <eui-col [rowStart]="'sm'" class="rounded-md bg-white p-3">
+      <h3 class="text-center text-5xl font-bold">Lets get in touch!</h3>
+      <span class="my-5 mr-auto text-accent"
+        >Whether you got a question, proposal or just want to say hi, go
+        ahead.</span
+      >
+      <eui-col [rowStart]="'md'">
         <form
           action="https://formspree.io/f/xleqnvdy"
           method="POST"
           class="w-full text-accent"
         >
           <eui-col>
-            <label for="name">Name: </label>
-            <input
-              class="rounded-md border-[1px]"
-              name="name"
-              type="text"
-              id="name"
-              required
-            />
-            <label for="email">Email: </label>
-            <input
-              class="rounded-md border-[1px]"
-              name="email"
-              type="email"
-              id="email"
-              required
-            />
+            <eui-col [rowStart]="'sm'">
+              <eui-col>
+                <label for="name">Name: </label>
+                <input
+                  class="rounded-md border-[1px]"
+                  name="name"
+                  type="text"
+                  id="name"
+                  required
+              /></eui-col>
+              <eui-col>
+                <label for="email">Email: </label>
+                <input
+                  class="rounded-md border-[1px]"
+                  name="email"
+                  type="email"
+                  id="email"
+                  required
+              /></eui-col>
+            </eui-col>
 
             <label for="phone"
               >Phone number:
