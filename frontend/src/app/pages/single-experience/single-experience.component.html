@@ -6,7 +6,7 @@
       alt="{{ experience.acf.firm }}"
       class="w-full object-contain"
     />
-    <eui-container>
+    <eui-container class="single">
       <eui-col>
         <eui-row>
           <h1 class="text-2xl font-bold text-primary">
@@ -19,7 +19,7 @@
             }
           </span></eui-row
         >
-        <p class="innerhtml" [innerHTML]="experience.acf.description"></p>
+        <p [outerHTML]="experience.acf.description"></p>
       </eui-col>
     </eui-container>
   </eui-section>
