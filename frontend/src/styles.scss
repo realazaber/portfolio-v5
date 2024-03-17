@@ -4,7 +4,7 @@
 
 @layer components {
   * {
-    @apply scroll-smooth duration-300 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-primary selection:bg-primary selection:text-white;
+    @apply scroll-smooth font-[poppins] duration-300 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-primary selection:bg-primary selection:text-white;
 
     body {
       strong {
