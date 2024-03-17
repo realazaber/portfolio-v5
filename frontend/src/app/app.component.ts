@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  CommonModule,
+  HashLocationStrategy,
+  LocationStrategy,
+} from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavigationModule } from './modules/navigation/navigation.module';
+
 import { EasyUIModule } from '@azaber/ngeasy-ui';
 
 import { SocialsComponent } from './components/socials/socials.component';
