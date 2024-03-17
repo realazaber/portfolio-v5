@@ -8,16 +8,16 @@
     />
     <eui-container class="single">
       <eui-col>
-        <eui-row>
+        <eui-col [rowStart]="'sm'">
           <h1 class="text-2xl font-bold text-primary">
             {{ experience.acf.firm }}
           </h1>
-          <span class="text-blue-400"
+          <span class="mt-auto text-blue-400"
             >Started on {{ experience.acf.start_date }}
             @if (experience.acf.still_working == false) {
               ended at {{ experience.acf.end_date }}
             }
-          </span></eui-row
+          </span></eui-col
         >
         <p [outerHTML]="experience.acf.description"></p>
       </eui-col>
