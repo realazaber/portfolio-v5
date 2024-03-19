@@ -1,7 +1,7 @@
 <eui-section id="portfolio">
   <eui-container>
     <h2>Portfolio</h2>
-    <eui-grid [cols]="1" [smCols]="2" [mdCols]="3">
+    <eui-grid [cols]="1" [smCols]="2" [mdCols]="3" [gap]="4">
       @for (project of projects; track project.id) {
         <app-main-project [project]="project"></app-main-project>
       }
