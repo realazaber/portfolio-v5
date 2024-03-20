@@ -2,13 +2,14 @@
   <eui-section id="testimonial">
     <eui-container>
       <h2>Testimonials</h2>
-      <eui-grid [cols]="1" [smCols]="2" [gap]="3">
+      <div class="columns-1 sm:columns-2">
         @for (testimonial of testimonials; track testimonial.acf.headline) {
           <app-testimonial-card
+            class="m-1"
             [testimonial]="testimonial"
           ></app-testimonial-card>
         }
-      </eui-grid>
+      </div>
     </eui-container>
   </eui-section>
 </div>

@@ -27,7 +27,7 @@ export class RoutesGenService {
     this.experienceService
       .getExperiences()
       .subscribe((experiences: IExperience[]) => {
-        experiences.forEach((experience) =>
+        experiences.forEach((experience: IExperience) =>
           routes.push(`/experience/${experience.id}`),
         );
       });

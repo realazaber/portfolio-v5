@@ -45,8 +45,12 @@
         }
       }
 
+      .eui-card {
+        @apply break-inside-avoid;
+      }
+
       .eui-imgcard {
-        @apply bg-slate-100 hover:shadow-lg;
+        @apply break-inside-avoid bg-slate-100 hover:shadow-lg;
 
         img {
           @apply max-h-56;
