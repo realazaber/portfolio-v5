@@ -45,6 +45,10 @@
         }
       }
 
+      .eui-card {
+        @apply break-inside-avoid;
+      }
+
       .eui-imgcard {
         @apply break-inside-avoid bg-slate-100 hover:shadow-lg;
 
