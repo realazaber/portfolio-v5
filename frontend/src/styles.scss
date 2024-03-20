@@ -118,6 +118,7 @@
       section {
         @apply h-full w-full;
         .eui-container {
+          @apply my-8;
           h2,
           h3 {
             @apply font-bold text-primary;
