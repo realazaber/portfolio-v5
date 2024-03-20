@@ -17,9 +17,15 @@ export class AboutComponent implements OnInit {
 
   about: string = '';
 
+  currentTab: number = 1;
+
   ngOnInit(): void {
     this.contenService.getContent(125).subscribe((data: IContent) => {
       this.about = data.acf.content;
     });
+  }
+
+  setTab(tabNum: number) {
+    this.currentTab = tabNum;
   }
 }
