@@ -3,11 +3,13 @@ import { IExperience } from '../../models/experience';
 import { ExperienceService } from '../../services/experience.service';
 import { ActivatedRoute } from '@angular/router';
 import { EasyUIModule } from '@azaber/ngeasy-ui';
+import { LoadingContentComponent } from '../../components/loading-content/loading-content.component';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-single-experience',
   standalone: true,
-  imports: [EasyUIModule],
+  imports: [EasyUIModule, LoadingContentComponent],
   templateUrl: './single-experience.component.html',
   styles: ``,
 })
@@ -17,6 +19,7 @@ export class SingleExperienceComponent implements OnInit {
   constructor(
     private experienceService: ExperienceService,
     private activatedRoute: ActivatedRoute,
+    private meta: Meta,
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +31,15 @@ export class SingleExperienceComponent implements OnInit {
         .getExperience(id)
         .subscribe((data: IExperience) => {
           this.experience = data;
+          this.meta.updateTag({
+            name: 'title',
+            content: data.acf.firm,
+          });
+
+          this.meta.updateTag({
+            name: 'description',
+            content: data.acf.description,
+          });
         });
     }
   }

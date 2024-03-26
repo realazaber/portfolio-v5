@@ -1,28 +1,31 @@
-<div class="h-20 sm:h-0 sm:min-h-[84px]"></div>
 @if (project) {
   <eui-section>
     <eui-container class="single">
       <img
         src="{{ project.acf.image }}"
         alt="{{ project.acf.title }}"
-        class="max-h-[40vh] w-full object-contain"
+        class="mt-20 max-h-[40vh] w-full object-contain"
       />
       <h1>{{ project.acf.title }}</h1>
       <eui-row class="mt-3">
         @if (project.acf.deploy_link != "") {
           <a href="{{ project.acf.deploy_link }}" target="_blank"
-            ><eui-button bgColor="Info" size="Medium">Deployment</eui-button></a
+            ><eui-button bgColor="Primary" size="Medium" class="text-white"
+              >Deployment</eui-button
+            ></a
           >
         }
         @if (project.acf.github != "") {
           <a href="{{ project.acf.github }}" target="_blank">
             <eui-button bgColor="Secondary" size="Medium" class="text-white"
               >Code</eui-button
-            >
-          </a>
+            ></a
+          >
         }
       </eui-row>
       <p class="innerhtml" [outerHTML]="project.acf.description"></p>
     </eui-container>
   </eui-section>
+} @else {
+  <app-loading-content></app-loading-content>
 }

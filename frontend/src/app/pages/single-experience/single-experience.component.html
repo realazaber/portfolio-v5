@@ -1,10 +1,9 @@
-<div class="h-20 sm:h-0 sm:min-h-[84px]"></div>
 @if (experience) {
   <eui-section>
     <img
       src="{{ experience.acf.logo }}"
       alt="{{ experience.acf.firm }}"
-      class="w-full object-contain"
+      class="mt-20 max-h-32 w-full bg-white object-contain dark:bg-darkbg"
     />
     <eui-container class="single">
       <eui-col>
@@ -23,4 +22,6 @@
       </eui-col>
     </eui-container>
   </eui-section>
+} @else {
+  <app-loading-content></app-loading-content>
 }

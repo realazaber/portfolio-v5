@@ -5,38 +5,39 @@
         class="flex flex-col justify-center text-accent"
         [innerHTML]="about"
       ></div>
+
       <div class="mx-auto flex flex-row flex-wrap items-center justify-center">
         <eui-button
           [size]="'Medium'"
-          [bgColor]="'Info'"
+          [bgColor]="'Primary'"
           class="p-1 text-white"
           (click)="setTab(1)"
           >💻 Frontend</eui-button
         >
         <eui-button
           [size]="'Medium'"
-          [bgColor]="'Info'"
+          [bgColor]="'Primary'"
           class="p-1 text-white"
           (click)="setTab(2)"
           >🌐 Backend</eui-button
         >
         <eui-button
           [size]="'Medium'"
-          [bgColor]="'Info'"
+          [bgColor]="'Primary'"
           class="p-1 text-white"
           (click)="setTab(3)"
           >📝Content Management Systems</eui-button
         >
         <eui-button
           [size]="'Medium'"
-          [bgColor]="'Info'"
+          [bgColor]="'Primary'"
           class="p-1 text-white"
           (click)="setTab(4)"
           >🔁 Dev Ops</eui-button
         >
         <eui-button
           [size]="'Medium'"
-          [bgColor]="'Info'"
+          [bgColor]="'Primary'"
           class="p-1 text-white"
           (click)="setTab(5)"
           >☁️ Cloud</eui-button
@@ -66,6 +67,7 @@
               <img
                 src="/assets/images/astro.webp"
                 class="h-10 w-10 object-contain"
+                alt="Astro Framework"
               /> </app-tech
           ></eui-grid>
         }

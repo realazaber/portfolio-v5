@@ -6,11 +6,17 @@ import { IContent } from '../../../models/content';
 import { ExperienceService } from '../../../services/experience.service';
 import { IExperience } from '../../../models/experience';
 import { ExperienceCardComponent } from '../../../components/experience/experience.component';
+import { TimelineComponent } from '../../../components/timeline/timeline.component';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule, EasyUIModule, ExperienceCardComponent],
+  imports: [
+    CommonModule,
+    EasyUIModule,
+    ExperienceCardComponent,
+    TimelineComponent,
+  ],
   templateUrl: './experience.component.html',
   styles: ``,
 })

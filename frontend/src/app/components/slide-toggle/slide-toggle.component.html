@@ -1,0 +1,31 @@
+<button
+  (click)="toggleMode()"
+  [ngClass]="getClasses()"
+  class="flex min-w-[5rem] rounded-full p-1 duration-500"
+>
+  <div
+    id="circle"
+    class="flex h-8 w-8 items-center justify-center rounded-full text-lg"
+  >
+    @if (isDark) {
+      <i class="bi bi-circle-fill text-xl font-bold text-white"></i>
+      <div
+        class="absolute right-6 top-2 aspect-square w-2 rounded-full bg-white"
+      ></div>
+      <div
+        class="absolute bottom-5 left-10 aspect-square w-1 rounded-full bg-white"
+      ></div>
+    } @else {
+      <i class="bi bi-moon-fill scale-x-[-1] transform text-white"></i>
+      <i
+        class="bi bi-star-fill absolute bottom-0 left-7 aspect-square text-[0.4rem] text-white"
+      ></i>
+      <i
+        class="bi bi-star-fill absolute right-9 top-0 aspect-square text-[0.2rem] text-white"
+      ></i>
+      <i
+        class="bi bi-star-fill absolute left-4 top-0 aspect-square text-[0.4rem] text-white"
+      ></i>
+    }
+  </div>
+</button>
