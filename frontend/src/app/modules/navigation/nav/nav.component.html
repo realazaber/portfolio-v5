@@ -1,21 +1,22 @@
 <nav class="fixed left-0 right-0 top-1 z-50">
   <div class="flex flex-row justify-between p-3">
-    <a routerLink="/">
-      <app-logo-nav></app-logo-nav>
-    </a>
+    <app-logo-nav (click)="routeHome()" class="w-1/3"></app-logo-nav>
     <eui-row
-      class="invisible hidden items-center justify-center gap-x-3 sm:visible sm:flex"
+      class="invisible hidden w-1/3 items-center justify-center gap-x-3 sm:visible sm:flex"
     >
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#testimonial">Testimonials</a>
+      <a href="#about" (click)="routeHome()">About</a>
+      <a href="#experience" (click)="routeHome()">Experience</a>
+      <a href="#portfolio" (click)="routeHome()">Portfolio</a>
+      <a href="#testimonial" (click)="routeHome()">Testimonials</a>
       <a href="https://personal-blog-ten-bice.vercel.app/" target="_blank">
         Blog
         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
       </a>
-
-      <a href="#contact">
+    </eui-row>
+    <eui-row
+      class="invisible hidden w-1/3 items-center justify-end gap-x-3 sm:visible sm:flex"
+    >
+      <a href="#contact" (click)="routeHome()">
         <eui-button bgColor="Primary" size="Medium" class="text-white"
           >Contact</eui-button
         ></a
@@ -71,6 +72,7 @@
               <i class="fa-regular fa-envelope"></i>
             </a>
           </eui-row>
+          <app-mode-toggle></app-mode-toggle>
         </eui-col>
       </div>
     }
