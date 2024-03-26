@@ -39,11 +39,6 @@ export class DesktopnavComponent {
 
   @HostListener('window:scroll', ['$event'])
   trackScroll() {
-    console.log(
-      'Current scroll position:',
-      window.scrollY || document.documentElement.scrollTop,
-    );
-
     if (window.scrollY > 540 && this.location.path() == '/') {
       this.classes = ' sm:bg-white sm:rounded-lg sm:shadow-md mx-3 ';
     } else if (window.scrollY > 40) {
