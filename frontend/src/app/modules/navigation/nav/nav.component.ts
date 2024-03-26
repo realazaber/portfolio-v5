@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { LogoNav } from '../../../components/logos/nav/nav.component';
 import { EasyUIModule } from '@azaber/ngeasy-ui';
@@ -20,6 +20,7 @@ import { ModeToggleComponent } from '../../../components/mode-toggle/mode-toggle
 })
 export class DesktopnavComponent {
   showMobile: boolean = false;
+  classes: string = '';
 
   toggleMobileMenu(): void {
     this.showMobile = !this.showMobile;
@@ -33,6 +34,22 @@ export class DesktopnavComponent {
   routeHome(): void {
     if (this.location.path() != '/') {
       this.router.navigate(['/']);
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  trackScroll() {
+    console.log(
+      'Current scroll position:',
+      window.scrollY || document.documentElement.scrollTop,
+    );
+
+    if (window.scrollY > 540 && this.location.path() == '/') {
+      this.classes = ' sm:bg-white sm:rounded-lg sm:shadow-md mx-3 ';
+    } else if (window.scrollY > 40) {
+      this.classes = ' sm:bg-white sm:rounded-lg sm:shadow-md mx-3 ';
+    } else {
+      this.classes = '';
     }
   }
 }
