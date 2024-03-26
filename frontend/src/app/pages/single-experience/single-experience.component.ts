@@ -3,11 +3,12 @@ import { IExperience } from '../../models/experience';
 import { ExperienceService } from '../../services/experience.service';
 import { ActivatedRoute } from '@angular/router';
 import { EasyUIModule } from '@azaber/ngeasy-ui';
+import { LoadingContentComponent } from '../../components/loading-content/loading-content.component';
 
 @Component({
   selector: 'app-single-experience',
   standalone: true,
-  imports: [EasyUIModule],
+  imports: [EasyUIModule, LoadingContentComponent],
   templateUrl: './single-experience.component.html',
   styles: ``,
 })
