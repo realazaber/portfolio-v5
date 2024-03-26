@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,10 @@
 @layer components {
   * {
     @apply scroll-smooth font-[poppins] duration-300 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-primary selection:bg-primary selection:text-white;
+
+    .eui-section {
+      @apply dark:bg-darkbg;
+    }
 
     body {
       strong {
@@ -50,16 +56,16 @@
       }
 
       .eui-imgcard {
-        @apply break-inside-avoid bg-slate-100 hover:shadow-lg;
+        @apply break-inside-avoid hover:shadow-lg;
 
         img {
-          @apply max-h-56;
+          @apply max-h-56 dark:bg-slate-200;
         }
 
         div {
           @apply p-0;
           .content {
-            @apply p-3;
+            @apply p-3 dark:bg-slate-900;
           }
         }
       }
@@ -88,7 +94,7 @@
         span,
         li,
         div {
-          @apply text-accent;
+          @apply text-accent dark:text-slate-50;
         }
 
         li {
@@ -113,7 +119,7 @@
       }
 
       .eui-card {
-        @apply bg-white;
+        @apply bg-white dark:bg-slate-900;
       }
       section {
         @apply h-full w-full;
@@ -128,7 +134,7 @@
           form {
             input,
             textarea {
-              @apply p-3 focus:border-2 focus:border-primary;
+              @apply bg-white p-3 focus:border-2 focus:border-primary dark:border-2 dark:border-primary dark:bg-darkbg;
             }
 
             #contact-submit {
