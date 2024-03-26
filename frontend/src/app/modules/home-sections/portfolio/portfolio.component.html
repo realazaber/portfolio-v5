@@ -1,13 +1,17 @@
-<eui-section id="portfolio">
-  <eui-container>
-    <h2>Notable works</h2>
-    <eui-grid [cols]="1" [smCols]="2" [mdCols]="3" [gap]="4">
-      @for (project of projects; track project.id) {
-        <app-main-project [project]="project"></app-main-project>
-      }
-    </eui-grid>
-    <a routerLink="/more-projects" class="mt-3">
-      <eui-button bgColor="Info" size="Medium"> Other projects </eui-button>
-    </a>
-  </eui-container>
-</eui-section>
+<div class="bg-gradient-to-b from-blue-50 to-white">
+  <eui-section id="portfolio">
+    <eui-container>
+      <h2>Notable works</h2>
+      <eui-grid [cols]="1" [smCols]="2" [mdCols]="3" [gap]="4">
+        @for (project of projects; track project.id) {
+          <app-main-project [project]="project"></app-main-project>
+        }
+      </eui-grid>
+      <a routerLink="/more-projects" class="mt-3">
+        <eui-button bgColor="Primary" class="text-white" size="Medium">
+          Other projects
+        </eui-button>
+      </a>
+    </eui-container>
+  </eui-section>
+</div>
