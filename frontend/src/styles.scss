@@ -8,11 +8,20 @@
   * {
     @apply scroll-smooth font-[poppins] duration-300 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-primary selection:bg-primary selection:text-white;
 
-    .eui-section {
-      @apply dark:bg-darkbg;
-    }
-
     body {
+      .eui-section {
+        @apply dark:bg-darkbg;
+      }
+
+      .active {
+        button {
+          @apply rounded-sm border-2 border-primary bg-white text-primary;
+        }
+      }
+
+      #socials {
+        @apply bg-white dark:bg-slate-800;
+      }
       strong {
         @apply text-primary;
       }
@@ -30,6 +39,10 @@
       nav {
         a {
           @apply text-primary hover:text-blue-800;
+        }
+
+        .active {
+          @apply rounded-sm bg-primary p-2 text-white;
         }
       }
 
