@@ -1,4 +1,4 @@
-<eui-section id="about">
+<eui-section id="about" class="section">
   <eui-container>
     <eui-col class="w-full">
       <div
@@ -6,42 +6,20 @@
         [innerHTML]="about"
       ></div>
 
-      <div class="mx-auto flex flex-row flex-wrap items-center justify-center">
-        <eui-button
-          [size]="'Medium'"
-          [bgColor]="'Primary'"
-          class="p-1 text-white"
-          (click)="setTab(1)"
-          >💻 Frontend</eui-button
-        >
-        <eui-button
-          [size]="'Medium'"
-          [bgColor]="'Primary'"
-          class="p-1 text-white"
-          (click)="setTab(2)"
-          >🌐 Backend</eui-button
-        >
-        <eui-button
-          [size]="'Medium'"
-          [bgColor]="'Primary'"
-          class="p-1 text-white"
-          (click)="setTab(3)"
-          >📝Content Management Systems</eui-button
-        >
-        <eui-button
-          [size]="'Medium'"
-          [bgColor]="'Primary'"
-          class="p-1 text-white"
-          (click)="setTab(4)"
-          >🔁 Dev Ops</eui-button
-        >
-        <eui-button
-          [size]="'Medium'"
-          [bgColor]="'Primary'"
-          class="p-1 text-white"
-          (click)="setTab(5)"
-          >☁️ Cloud</eui-button
-        >
+      <div
+        #buttonsRow
+        class="mx-auto flex flex-row flex-wrap items-center justify-center"
+      >
+        @for (btnText of btnTexts; track btnText.tabNum) {
+          <eui-button
+            [size]="'Medium'"
+            [bgColor]="'Primary'"
+            [ngClass]="{ active: currentTab === btnText.tabNum }"
+            class="p-1 text-white"
+            (click)="setTab(btnText.tabNum)"
+            >{{ btnText.text }}</eui-button
+          >
+        }
       </div>
       <eui-col class="flex flex-col items-center justify-center">
         @if (currentTab == 1) {

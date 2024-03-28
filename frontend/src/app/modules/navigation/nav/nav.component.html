@@ -1,14 +1,26 @@
-<nav class="fixed left-0 right-0 top-1 z-50">
+<nav class="fixed left-0 right-0 top-0 z-50">
   <div class="flex flex-row justify-between p-3" [ngClass]="classes">
     <app-logo-nav (click)="routeHome()" class=""></app-logo-nav>
     <eui-row
       class="invisible hidden items-center justify-center gap-x-3 text-xl font-bold sm:visible sm:flex"
     >
-      <a href="#about" (click)="routeHome()">About</a>
-      <a href="#experience" (click)="routeHome()">Experience</a>
-      <a href="#portfolio" (click)="routeHome()">Portfolio</a>
-      <a href="#testimonial" (click)="routeHome()">Testimonials</a>
-      <a href="https://personal-blog-ten-bice.vercel.app/" target="_blank">
+      <a id="abtLink" class="navlink" href="#about" (click)="routeHome()"
+        >About</a
+      >
+      <a id="expLink" class="navlink" href="#experience" (click)="routeHome()"
+        >Experience</a
+      >
+      <a id="porLink" class="navlink" href="#portfolio" (click)="routeHome()"
+        >Portfolio</a
+      >
+      <a id="tesLink" class="navlink" href="#testimonial" (click)="routeHome()"
+        >Testimonials</a
+      >
+      <a
+        id="bloLink"
+        href="https://personal-blog-ten-bice.vercel.app/"
+        target="_blank"
+      >
         Blog
         <i class="fa-solid fa-arrow-up-right-from-square text-lg"></i>
       </a>
@@ -33,7 +45,7 @@
       <div
         id="mobile-menu"
         (click)="toggleMobileMenu()"
-        class="visible fixed bottom-0 left-0 right-0 top-0 z-20 flex items-center justify-center bg-white sm:invisible sm:hidden"
+        class="visible fixed bottom-0 left-0 right-0 top-0 z-20 flex items-center justify-center bg-white sm:invisible sm:hidden dark:bg-darkbg"
       >
         <eui-col
           [ygap]="4"
