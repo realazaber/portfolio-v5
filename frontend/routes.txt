@@ -1,5 +1,6 @@
 /
 /more-projects
+/project/185
 /project/156
 /project/153
 /project/107
