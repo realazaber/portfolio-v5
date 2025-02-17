@@ -23,7 +23,7 @@
           >
         }
       </eui-row>
-      <p class="innerhtml" [outerHTML]="project.acf.description"></p>
+      <div class="innerhtml" [innerHtml]="project.acf.description"></div>
     </eui-container>
   </eui-section>
 } @else {
