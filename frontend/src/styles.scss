@@ -23,7 +23,7 @@
         @apply bg-white dark:bg-slate-800;
       }
       strong {
-        @apply text-primary;
+        @apply font-semibold text-primary;
       }
 
       a {
@@ -47,7 +47,7 @@
       }
 
       button {
-        @apply rounded-md px-4 py-2;
+        @apply rounded-md px-4 py-2 text-white;
       }
 
       .btn-pri {
@@ -119,14 +119,14 @@
         }
 
         strong {
-          @apply text-primary;
+          @apply font-semibold text-primary;
         }
 
         ul {
           @apply text-primary;
           b,
           strong {
-            @apply text-primary;
+            @apply font-semibold text-primary;
           }
         }
       }
@@ -137,7 +137,7 @@
       section {
         @apply h-full w-full;
         .eui-container {
-          @apply my-8;
+          @apply mx-auto my-8 w-4/5;
           h2,
           h3 {
             @apply font-bold text-primary;
