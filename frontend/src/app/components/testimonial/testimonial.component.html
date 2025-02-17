@@ -1,12 +1,26 @@
 <eui-card>
   <h3 class="text-center text-xl font-bold text-primary">
-    {{ testimonial?.acf?.headline }}
+    {{ testimonial.acf.headline }}
   </h3>
 
-  <p class="min-h-28 text-accent">{{ testimonial?.acf?.description }}</p>
+  <p class="min-h-28 text-accent">{{ testimonial.acf.description }}</p>
 
   <span class="mx-auto text-accent opacity-85"
-    >From {{ testimonial?.acf?.person }} - {{ testimonial?.acf?.position }} at
-    {{ testimonial?.acf?.company }}</span
+    >From {{ testimonial.acf.person }} - {{ testimonial.acf.position }} at
+    {{ testimonial.acf.company }}</span
   >
+  <div class="mx-auto flex w-full flex-row items-center justify-center gap-x-1">
+    <a
+      class="btn btn-primary text-white"
+      *ngIf="backNum > -1"
+      (click)="goToSlide(backNum, $event)"
+      ><</a
+    >
+    <a
+      class="btn btn-primary text-white"
+      *ngIf="nextNum < length"
+      (click)="goToSlide(nextNum, $event)"
+      >></a
+    >
+  </div>
 </eui-card>
