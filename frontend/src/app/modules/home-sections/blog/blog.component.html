@@ -1,7 +1,7 @@
 <eui-section id="blog" class="section">
   <eui-container>
     <h2>Blog</h2>
-    <eui-grid [cols]="1" [smCols]="2" [mdCols]="3" [gap]="4">
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
       @for (post of posts; track post.title) {
         <app-blog-card
           class="mx-auto"
@@ -14,7 +14,7 @@
           [datePosted]="post.datePosted"
         ></app-blog-card>
       }
-    </eui-grid>
+    </div>
 
     <a
       href="https://personal-blog-ten-bice.vercel.app/"
