@@ -11,12 +11,7 @@ import { TimelineComponent } from '../../../components/timeline/timeline.compone
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [
-    CommonModule,
-    EasyUIModule,
-    ExperienceCardComponent,
-    TimelineComponent,
-  ],
+  imports: [CommonModule, EasyUIModule, ExperienceCardComponent],
   templateUrl: './experience.component.html',
   styles: ``,
 })
@@ -36,11 +31,10 @@ export class ExperienceComponent implements OnInit {
     });
 
     this.experienceService.getExperiences().subscribe((data: IExperience[]) => {
-      // Sort experiences in descending order by start_date (newest to oldest)
       this.experiences = data.sort((a, b) => {
-        const dateA = new Date(a.acf.start_date);
-        const dateB = new Date(b.acf.start_date);
-        return dateB.getTime() - dateA.getTime(); // Descending order
+        const dateA = new Date(a.acf.end_date);
+        const dateB = new Date(b.acf.end_date);
+        return dateB.getTime() - dateA.getTime();
       });
 
       // Trim experience descriptions to 120 characters
@@ -48,6 +42,7 @@ export class ExperienceComponent implements OnInit {
         this.counter++;
         exp.acf.description =
           exp.acf.description.substring(0, 120).trim() + '...';
+        exp.acf.end_date = exp.acf.end_date.slice(-4);
         exp.count = this.counter;
       });
     });

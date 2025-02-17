@@ -1,16 +1,36 @@
-<div class="section bg-gradient-to-b from-white to-blue-50">
-  <eui-section id="experience">
+<div class="section bg-gradient-to-b from-blue-50 to-white">
+  <eui-section>
     <eui-container>
       <h2>Experience</h2>
-      <div class="my-3 w-full text-accent" [innerHTML]="experience"></div>
-      <div class="columns-1 break-inside-avoid sm:columns-2">
-        @for (experience of experiences; track experience.count) {
-          <app-experience-card
-            class="m-3 break-inside-avoid"
-            [experience]="experience"
-          ></app-experience-card>
+      <ul
+        class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+      >
+        @for (experience of experiences; track $index) {
+          <li class="my-[-0.5rem]">
+            <div class="timeline-middle">
+              <div class="rounded-full bg-primary p-3 font-bold text-white">
+                {{ experience.acf.end_date }}
+              </div>
+            </div>
+            @if ($index % 2 == 0) {
+              <div class="timeline-start md:text-end">
+                <app-experience-card
+                  class="mx-3 break-inside-avoid"
+                  [experience]="experience"
+                ></app-experience-card>
+              </div>
+            } @else {
+              <div class="timeline-end md:text-end">
+                <app-experience-card
+                  class="mx-3 break-inside-avoid"
+                  [experience]="experience"
+                ></app-experience-card>
+              </div>
+            }
+            <hr class="min-h-full rounded-full bg-primary opacity-50" />
+          </li>
         }
-      </div>
+      </ul>
     </eui-container>
   </eui-section>
 </div>
