@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "dev": "ng serve -o",
     "build": "ng build",
     "build-run": "ng build && cd dist/frontend/browser && http-server .",
     "watch": "ng build --watch --configuration development",
