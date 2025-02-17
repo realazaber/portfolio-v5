@@ -1,15 +1,17 @@
-<div class="section">
-  <eui-section id="testimonial">
-    <eui-container>
-      <h2>Testimonials</h2>
-      <div class="columns-1 sm:columns-2">
-        @for (testimonial of testimonials; track testimonial.acf.headline) {
-          <app-testimonial-card
-            class="m-1"
-            [testimonial]="testimonial"
-          ></app-testimonial-card>
-        }
-      </div>
-    </eui-container>
-  </eui-section>
-</div>
+<eui-section id="testimonial">
+  <div class="eui-container">
+    <h2>Testimonials</h2>
+    <div class="carousel mx-auto w-full sm:w-4/5">
+      @for (testimonial of testimonials; track $index) {
+        <app-testimonial-card
+          id="slide{{ $index }}"
+          class="carousel-item relative m-1 w-full"
+          [cardIndex]="$index"
+          [testimonial]="testimonial"
+          [length]="testimonials.length"
+          tabindex="-1"
+        ></app-testimonial-card>
+      }
+    </div>
+  </div>
+</eui-section>
