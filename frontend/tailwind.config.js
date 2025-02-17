@@ -13,5 +13,16 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#007aff",
+          secondary: "#0ea5e9",
+          accent: "#8d959b",
+        },
+      },
+    ],
+  },
+  plugins: [require("tailwind-scrollbar"), require("daisyui")],
 };
